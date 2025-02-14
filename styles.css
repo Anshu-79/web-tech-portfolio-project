@@ -1,0 +1,395 @@
+body {
+    background: rgb(13, 0, 34);
+    background: linear-gradient(180deg, rgba(13, 0, 34, 1) 0%, rgba(1, 0, 41, 1) 100%);
+    color: #D0CFCF;
+    font-family: 'Funnel Display', 'Trebuchet', sans-serif;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.container {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    scroll-snap-align: start;
+    margin: 20px;
+}
+
+/* For the background stars */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* SECTION 1: ABOUT ME */
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    width: fit-content;
+    margin: auto;
+    padding: 2vw;
+}
+
+.pfp {
+    flex: 1;
+    width: 20vw;
+    overflow: hidden;
+    border-radius: 100%;
+    border: #3454D1 5px solid;
+
+}
+
+.pfp img {
+    width: 100%;
+    scale: 1.1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pfp:hover img {
+    transform: scale(1.3);
+}
+
+.about-me {
+    flex: 4;
+    font-size: 5vh;
+}
+
+.name {
+    font-size: 10vh;
+    font-weight: bold;
+}
+
+.name::after {
+    content: "|";
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* SECTION 2: SKILLS & QUALIFICATIONS */
+
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+}
+
+.skills-joke {
+    text-align: center;
+    font-size: 5vh;
+}
+
+.grade-table {
+    background-color: #D0CFCF;
+    color: #010029;
+    border-collapse: collapse;
+    border-radius: 20px;
+    font-size: 0.8em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.grade-table thead tr {
+    background-color: #3454D1;
+    color: #ffffff;
+    text-align: left;
+}
+
+.grade-table th,
+.grade-table td {
+    padding: 12px 15px;
+}
+
+.grade-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.grade-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.grade-table tbody tr:last-of-type {
+    border-bottom: 2px solid #010029;
+}
+
+.ps {
+    margin-top: 15vh;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.skills {
+    display: flex;
+    gap: 5vw;
+}
+
+.skill-box {
+    display: flex;
+    padding: 15px;
+    background-color: #D0CFCF;
+    color: #010029;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 0.7em;
+}
+
+.skill-box img {
+    padding-right: 10px;
+    height: 100%;
+}
+
+.skills-progress-bar {
+    font-size: 15px;
+    width: 0%;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: none;
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: var(--width, 50%);
+    }
+}
+
+.skill-box:hover .skills-progress-bar {
+    animation: fillProgress 1s ease-in-out forwards;
+}
+
+.flutter {
+    text-align: right;
+    padding-right: 5px;
+    color: #222222;
+    width: 70%;
+    --width: 70%;
+    background: linear-gradient(to right, #01579b, #54c5f8);
+}
+
+.python {
+    text-align: right;
+    padding-right: 5px;
+    color: #222222;
+    --width: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #c4b700, #f8d754);
+}
+
+.ml {
+    text-align: right;
+    padding-right: 5px;
+    color: #222222;
+    --width: 27%;
+    width: 27%;
+    background: linear-gradient(to right, #fa555c, #f24db4);
+}
+
+/* SECTION 3: ABOUT WEB TECHNOLOGIES */
+
+.web-tech {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.question {
+    text-align: left;
+    font-size: 7vh;
+}
+
+.answer {
+    width: 70%;
+    padding-left: 22vw;
+    padding-bottom: 10vh;
+}
+
+.card-container {
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    background: #e3e3e3;
+}
+
+.card:hover img {
+    transform: scale(1.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.html:hover {
+    background: #E34F26;
+    color: white;
+}
+
+.card.css:hover {
+    background: #1572B6;
+    color: white;
+}
+
+.card.js:hover {
+    background: #F7DF1E;
+    color: black;
+}
+
+.description {
+    font-size: 2vh;
+    padding-top: 5px;
+}
+
+/* To make page responsive on mobile phones */
+@media (max-width: 768px) {
+
+    body {
+        height: auto;
+    }
+
+    .container {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    section {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 5vh 5vw;
+        font-size: 1.5rem;
+    }
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 3vw;
+        padding: 5vw;
+    }
+
+    .pfp {
+        width: 40vw;
+    }
+
+    .about-me {
+        font-size: 4vh;
+    }
+
+    .name {
+        font-size: 8vh;
+    }
+
+    .education {
+        gap: 5vh;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+
+    .skill-box {
+        width: 80%;
+        font-size: 1em;
+    }
+
+    .skills-progress-bar {
+        font-size: 14px;
+    }
+
+    .grade-table {
+        font-size: 0.7em;
+        min-width: 100%;
+    }
+
+    .skills-joke {
+        font-size: 3vh;
+    }
+
+    .web-tech {
+        text-align: center;
+        gap: 3vh;
+    }
+
+    .question {
+        font-size: 5vh;
+    }
+
+    .answer {
+        width: 90%;
+        padding-left: 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .description {
+        font-size: 1.8vh;
+    }
+
+    .ps {
+        font-size: 3vh;
+        margin-top: 10vh;
+    }
+}

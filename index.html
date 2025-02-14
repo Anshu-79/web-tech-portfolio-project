@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Web Portfolio</title>
+</head>
+
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="container">
+        <!-- SECTION 1: ABOUT ME -->
+        <section>
+            <div class="intro">
+                <div class="pfp">
+                    <img src="imgs/pfp.jpg" alt="A photo of me">
+                </div>
+                <div class="about-me">
+                    <p>Hi! I'm...<br><span class="name"></span><br>and this is my programming portfolio</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECTION 2: SKILLS & QUALIFICATIONS -->
+        <section>
+            <div class="education">
+                <div class="skills-joke">
+                    Some would say that<br>
+                    my skills and qualifications are "out-of-the-world" 👽
+                </div>
+                <table class="grade-table">
+                    <thead>
+                        <tr>
+                            <th>Institute</th>
+                            <th>Class/Index</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pinewood School</td>
+                            <td>X</td>
+                            <td>98.4%</td>
+                        </tr>
+                        <tr>
+                            <td>Pinewood School</td>
+                            <td>XII</td>
+                            <td>91.4%</td>
+                        </tr>
+                        <tr>
+                            <td>RGIPT</td>
+                            <td>CPI</td>
+                            <td>9.38/10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="skills">
+                    <div class="skill-box">
+                        <img src="imgs/flutter.png" alt="Flutter logo" width="50px">
+                        <div>
+                            Flutter Development
+                            <div class="skills-progress-bar flutter">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <img src="imgs/python.png" alt="Python logo" width="50px">
+                        <div>
+                            Python Development
+                            <div class="skills-progress-bar python">
+                                Advanced
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <img src="imgs/ml.png" alt="Python logo" width="50px">
+                        <div>
+                            Machine Learning
+                            <div class="skills-progress-bar ml">
+                                Newbie
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <p class="ps">I made this page using web technologies.<br>Wanna know more about them? Scroll down!</p>
+        </section>
+
+        <!-- SECTION 3: ABOUT WEB TECHNOLOGIES -->
+        <section>
+            <div class="web-tech">
+                <div class="question"><strong>What are Web Technologies?</strong></div>
+                <div class="answer">Web technologies encompass the tools and standards used to create and interact
+                    with content on the World Wide Web.</div>
+                Here are the front-end web technologies I used for making this page:
+                <div class="card-container">
+                    <div class="card html">
+                        <img src="imgs/html.png" alt="HTML Icon">
+                        HTML
+                        <div class="description">Structures the content of web pages</div>
+                    </div>
+                    <div class="card css">
+                        <img src="imgs/css.png" alt="CSS Icon">
+                        CSS
+                        <div class="description">Styles the appearance of web pages</div>
+                    </div>
+                    <div class="card js">
+                        <img src="imgs/js.png" alt="JS Icon">
+                        JavaScript
+                        <div class="description">Adds interactivity to web pages</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
